@@ -73,7 +73,7 @@ export default function Home() {
         <img src="/images/ads2.png" alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div className="mt-10 mx-10 text-xl font-semibold shadow-lg rounded-xl border lg:flex items-center lg:px-10 px-5 py-10 mb-20">
+      <div className="mt-10 lg:mx-10 mx-3 text-xl font-semibold shadow-lg rounded-xl border lg:flex items-center lg:px-10 px-5 py-10 mb-20">
           <div className="flex-1 mb-5">
             <div className="flex mb-2">
               Sign up to 
