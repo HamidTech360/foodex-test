@@ -1,8 +1,6 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import { NAV_LINKS } from "@/constants";
-import { div } from "framer-motion/client";
 import Sidebar from "./components/sidebar";
 
 

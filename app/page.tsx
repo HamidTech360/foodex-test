@@ -1,7 +1,5 @@
 "use client"
 
-
-
 import { IoMdMenu } from "react-icons/io";
 import { PiStarFourFill } from "react-icons/pi";
 import Carousel from "./components/slider";

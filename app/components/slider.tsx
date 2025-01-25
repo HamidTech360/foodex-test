@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { AiOutlineLike } from 'react-icons/ai';
 import { GoDotFill } from 'react-icons/go';
 
@@ -63,7 +63,7 @@ function Carousel() {
                 </div>
             </div>
             :
-            <img src='/images/span.png' className='lg:h-[22rem] h-[16rem] w-84 object-cover'/>
+            <img key={index} src='/images/span.png' className='lg:h-[22rem] h-[16rem] w-84 object-cover'/>
             )}
 
            
