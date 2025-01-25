@@ -1,8 +1,8 @@
 // NAVIGATION
 export const NAV_LINKS = [
-    { href: '/', key: 'about_us', label: 'About us' },
-    { href: '/', key: 'how_we_work', label: 'How we Work?' },
-    { href: '/', key: 'testimonials', label: 'Testimonials' },
+    { href: '/',  label: 'Home' },
+    { href: '/wait-list',  label: 'Join WaitList' },
+   
   ];
   
  

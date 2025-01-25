@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
-import { MantineProvider } from "@mantine/core";
-import CustomQueryClientProvider from "./providers/react-query-provider";
-import { Toaster } from "react-hot-toast";
 
-import "@mantine/core/styles.layer.css";
-// import "@mantine/dates/styles.layer.css";
+import type { Metadata } from "next";
 import "./globals.css";
+import { NAV_LINKS } from "@/constants";
+import { div } from "framer-motion/client";
+import Sidebar from "./components/sidebar";
 
 
 export const metadata: Metadata = {
-  title: "Sqwads",
+  title: "FoodEx",
   description: "Client side landing page",
 };
 
@@ -18,32 +16,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com"  />
-        <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet"/>
       </head>
       <body >
        
-        <CustomQueryClientProvider>
+      
+          <main className=" ">
+            <div className="flex max-h-screen">
+                <div className="w-64  lg:block hidden px-14 py-7">
+                    <Sidebar/>
+                </div>
+                <div className="flex-1  overflow-y-scroll">
+                    {children}
+                </div>
+            </div>
           
-          <MantineProvider>
-          <main className=" overflow-hidden">
-            {children}
-            <Toaster
-              position="top-center"
-              reverseOrder={false}
-              gutter={8}
-              containerClassName="text-sm"
-              toastOptions={{
-                duration: 2500,
-              }}
-            />
           </main>
-          </MantineProvider>
-        </CustomQueryClientProvider>
+          
       </body>
     </html>
   );
